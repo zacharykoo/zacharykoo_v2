@@ -81,20 +81,6 @@ const Experience = () => {
                 resulting in enhanced system functionality and faster query execution times."
                 />
                 <Details 
-                position="Software Engineer" company="Honest Emapthy"
-                companyLink="https://www.peersupport.io/"
-                time="2022-Present" address="Vancouver, BC"
-                work="Experienced in developing scalable, user-friendly web applications 
-                with a strong focus on front-end using React JS and implementing responsive 
-                design principles for optimal mobile compatibility. Skilled in utilizing 
-                Node, Redux, Express, Sequelize, and Firebase as primary REST API frameworks 
-                to build scalable, multi-tenant database endpoints with complex relational 
-                models. Proficient in implementing real-time chat systems using Firebase's 
-                real-time database features. Successfully introduced and implemented automated 
-                end-to-end Cypress testing and unit testing using Jest to improve testing 
-                efficiency and reduce manual testing time for applications."
-                />
-                <Details 
                 position="Math and Science Tutor" company="Tutor Doctor"
                 companyLink="https://www.tutordoctor.com/"
                 time="2017-2018" address="Calgary, AB"
