@@ -57,18 +57,6 @@ const Education = () => {
                 and knowledge in the design and implementation of intelligent agents and expert systems."
                 />
                 <Details 
-                type="Bachelor of Science in Computer Science"
-                time="2019-2022" 
-                place="Univsersity of Calgary"
-                info="As part of the International Exchange Program at Senshu University, 
-                I had the opportunity to take regular university classes, 
-                including courses in Computer Science and Japanese Language. 
-                While most of the classes were taught in Japanese, some courses 
-                in the Department of English were taught in English. This experience 
-                allowed me to further develop my skills in both fields while immersing myself 
-                in a different academic and cultural environment."
-                />
-                <Details 
                 type="Japanese Language Exchange Program"
                 time="2018-2019" 
                 place="Senshu University"
