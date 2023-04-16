@@ -8,15 +8,19 @@ import React from 'react'
 
 import project1 from "../../public/images/projects/ecom.png"
 import project2 from "../../public/images/projects/distributed.png"
-import project3 from "../../public/images/projects/studentEnrollment.png"
+import project3 from "../../public/images/projects/rpg.png"
 import project4 from "../../public/images/projects/selfCheckout.png"
 import project5 from "../../public/images/projects/draw.png"
+import project6 from "../../public/images/projects/scheduler.png"
 
 const FeaturedProject = ({type, title, summary, img, link, github}) => {
     return (
-        <article className='w-full flex items-center justify-between
+        <article className='w-full flex items-center justify-between relative rounded-br-2xl
         rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12
         '>
+            <div className='absolute top-0 -right-3 -z-10 w-[100.5%] h-[102%] rounded-[2rem] bg-dark
+            rounded-br-3xl
+            '/>
             <Link href={link} target="_blank"
             className='w-1/2 cursor-pointer overflow-hidden rounded-lg'
             >
@@ -46,6 +50,9 @@ const Project = ({title, type, img, link, github}) => {
         <article className='w-full flex flex-col items-center justify-center rounded-2xl
         border border-solid border-dark bg-light p-6 relative
         '>
+            <div className='absolute top-0 -right-3 -z-10 w-[100.5%] h-[102%] rounded-[2rem] bg-dark
+            rounded-br-3xl
+            '/>
             <Link href={link} target="_blank"
             className='w-full cursor-pointer overflow-hidden rounded-lg'
             >
@@ -85,7 +92,7 @@ const projects = () => {
                 className='mb-16'
                 />
 
-                <div className='grid grid-cols-12 gap-24'>
+                <div className='grid grid-cols-12 gap-24 gap-y-32'>
                     <div className='col-span-12'>
                         <FeaturedProject 
                             title="Ecommerce Web Application"
@@ -105,17 +112,17 @@ const projects = () => {
                         <Project 
                             title="Distributed System"
                             img={project2}
-                            link="https://github.com/zacharykoo/EcommerceWebApp"
-                            github="https://github.com/zacharykoo/EcommerceWebApp"
+                            link="https://github.com/zacharykoo/DistributedSystem"
+                            github="https://github.com/zacharykoo/DistributedSystem"
                             type="Featured Project"
                         />
                     </div>
                     <div className='col-span-6'>
                         <Project 
-                            title="Student Enrollment Web Application"
+                            title="Adventure RPG game"
                             img={project3}
-                            link="https://github.com/zacharykoo/EcommerceWebApp"
-                            github="https://github.com/zacharykoo/EcommerceWebApp"
+                            link="https://github.com/zacharykoo/TeamBattleRoyal-TeamG"
+                            github="https://github.com/zacharykoo/TeamBattleRoyal-TeamG"
                             type="Featured Project"
                         />
                     </div>
@@ -138,18 +145,21 @@ const projects = () => {
                             type="Featured Project"
                         />
                     </div>
-                    <div className='col-span-12'>
-                        <FeaturedProject 
+                    <div className='col-span-6'>
+                        <Project 
                             title="Nightowl-Studios: Real time drawing-guessing game"
                             img={project5}
-                            summary="The development of a real-time drawing game involved the creation of a 
-                            websocket connection and Gorilla API service in Golang. The game's unparalleled 
-                            responsiveness and stability were achieved through the implementation of a canvas 
-                            drawing tool with event handlers, establishing a new standard for real-time drawing 
-                            experiences. In addition, the web client and UI communication were designed using VueJS, 
-                            enhancing the user experience and streamlining frontend functionality."
-                            link="https://github.com/zacharykoo/selfcheckoutProject"
-                            github="https://github.com/zacharykoo/selfcheckoutProject"
+                            link="https://github.com/nightowl-studios/arcade"
+                            github="https://github.com/nightowl-studios/arcade"
+                            type="Featured Project"
+                        />
+                    </div>
+                    <div className='col-span-6'>
+                        <Project 
+                            title="AI-Scheduling-System"
+                            img={project6}
+                            link="https://github.com/jarint/AI-Scheduling-System"
+                            github="https://github.com/jarint/AI-Scheduling-System"
                             type="Featured Project"
                         />
                     </div>
