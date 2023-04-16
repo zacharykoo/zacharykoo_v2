@@ -50,7 +50,7 @@ const Experience = () => {
 
             <ul className='w-full flex flex-col items-start justify-between ml-4'>
                 <Details 
-                position="Fullstack Engineer" company="Honest Emapthy"
+                position="Fullstack Engineer" company="Honest Empathy"
                 companyLink="https://www.peersupport.io/"
                 time="2022-Present" address="Vancouver, BC"
                 work="Experienced in developing scalable, user-friendly web applications 
