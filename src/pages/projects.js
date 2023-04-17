@@ -5,6 +5,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 import project1 from "../../public/images/projects/ecom.png"
 import project2 from "../../public/images/projects/distributed.png"
@@ -13,31 +14,41 @@ import project4 from "../../public/images/projects/selfCheckout.png"
 import project5 from "../../public/images/projects/draw.png"
 import project6 from "../../public/images/projects/scheduler.png"
 
+const FramerImage = motion(Image); 
+
 const FeaturedProject = ({type, title, summary, img, link, github}) => {
     return (
         <article className='w-full flex items-center justify-between relative rounded-br-2xl
-        rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12
+        rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 dark:bg-dark dark:border-light
         '>
-            <div className='absolute top-0 -right-3 -z-10 w-[100.5%] h-[102%] rounded-[2rem] bg-dark
+            <div className='absolute top-0 -right-3 -z-10 w-[100.5%] h-[102%] rounded-[2rem] bg-dark dark:bg-light
             rounded-br-3xl
             '/>
             <Link href={link} target="_blank"
             className='w-1/2 cursor-pointer overflow-hidden rounded-lg'
             >
-                <Image src={img} alt={title} className='w-full' style={{ height: "50vh" }}/>
+                <FramerImage src={img} alt={title} className='w-full' 
+                style={{ height: "50vh" }}
+                whileHover={{scale: 1.03}}
+                transition={{duration: 0.2}}
+                priority={true}
+                sizes='(max-width: 768px) 100vw, 
+                (max-width: 1200px) 50vw,
+                50vw'
+                />
             </Link>
 
             <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
-                <span className='text-primary font-medium text-xl'>{type}</span>
+                <span className='text-primary font-medium text-xl dark:text-primaryDark'>{type}</span>
                 <Link href={link} target="_blank" className='hover:underline underline-offset-2'>
-                    <h2 className='my-2 w-full text-left text-4xl font-bold'>{title}</h2>
+                    <h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light'>{title}</h2>
                 </Link>
 
-                <p className='my-2 font-medium text-dark '>{summary}</p>
+                <p className='my-2 font-medium text-dark dark:text-light'>{summary}</p>
                 <div className='mt-2 flex items-center'>
                     <Link href={github} target="_blank" className='w-10'> <GithubIcon />{" "} </Link>
                     <Link href={link} target="_blank"
-                    className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold'
+                    className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark'
                     > Visit Project </Link>
                 </div>
             </div>
@@ -48,19 +59,23 @@ const FeaturedProject = ({type, title, summary, img, link, github}) => {
 const Project = ({title, type, img, link, github}) => {
     return (
         <article className='w-full flex flex-col items-center justify-center rounded-2xl
-        border border-solid border-dark bg-light p-6 relative
+        border border-solid border-dark bg-light p-6 relative dark:border-light dark:bg-dark
         '>
-            <div className='absolute top-0 -right-3 -z-10 w-[100.5%] h-[102%] rounded-[2rem] bg-dark
+            <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[102%] rounded-[2rem] bg-dark dark:bg-light
             rounded-br-3xl
             '/>
             <Link href={link} target="_blank"
             className='w-full cursor-pointer overflow-hidden rounded-lg'
             >
-                <Image src={img} alt={title} className='w-full h-auto' style={{ height: "40vh" }}/>
+                <FramerImage src={img} alt={title} className='w-full h-auto' 
+                style={{ height: "40vh" }}
+                whileHover={{scale: 1.03}}
+                transition={{duration: 0.2}}
+                />
             </Link>
 
             <div className='w-full flex flex-col items-start justify-between mt-4'>
-                <span className='text-primary font-medium text-xl'>{type}</span>
+                <span className='text-primary font-medium text-xl dark:text-primaryDark'>{type}</span>
                 <Link href={link} target="_blank" className='hover:underline underline-offset-2'>
                     <h2 className='my-2 w-full text-left text-3xl font-bold'>{title}</h2>
                 </Link>
@@ -86,7 +101,7 @@ const projects = () => {
             <meta name="description" content="This is the about page" />
         </Head>
 
-        <main className='w-full mb-16 flex flex-col items-center justify-center'>
+        <main className='w-full mb-16 flex flex-col items-center justify-center dark:text-light'>
             <Layout className='pt-16'>
                 <AnimatedText text="Imagination Trumps Knowledge!" 
                 className='mb-16'
@@ -114,7 +129,7 @@ const projects = () => {
                             img={project2}
                             link="https://github.com/zacharykoo/DistributedSystem"
                             github="https://github.com/zacharykoo/DistributedSystem"
-                            type="Featured Project"
+                            type="Application Project"
                         />
                     </div>
                     <div className='col-span-6'>
@@ -123,7 +138,7 @@ const projects = () => {
                             img={project3}
                             link="https://github.com/zacharykoo/TeamBattleRoyal-TeamG"
                             github="https://github.com/zacharykoo/TeamBattleRoyal-TeamG"
-                            type="Featured Project"
+                            type="Game Project"
                         />
                     </div>
 
@@ -142,7 +157,7 @@ const projects = () => {
                             optimal application performance."
                             link="https://github.com/zacharykoo/selfcheckoutProject"
                             github="https://github.com/zacharykoo/selfcheckoutProject"
-                            type="Featured Project"
+                            type="Application Project"
                         />
                     </div>
                     <div className='col-span-6'>
@@ -151,7 +166,7 @@ const projects = () => {
                             img={project5}
                             link="https://github.com/nightowl-studios/arcade"
                             github="https://github.com/nightowl-studios/arcade"
-                            type="Featured Project"
+                            type="Game Project"
                         />
                     </div>
                     <div className='col-span-6'>
@@ -160,7 +175,7 @@ const projects = () => {
                             img={project6}
                             link="https://github.com/jarint/AI-Scheduling-System"
                             github="https://github.com/jarint/AI-Scheduling-System"
-                            type="Featured Project"
+                            type="AI Project"
                         />
                     </div>
                 </div>
