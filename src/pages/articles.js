@@ -7,9 +7,7 @@ import React, { useRef } from 'react'
 import { motion, useMotionValue } from 'framer-motion'
 
 
-import articleImage1 from "../../public/images/articles/create loading screen in react js.jpg"
-import articleImage2 from "../../public/images/articles/pagination component in reactjs.jpg"
-import articleImage3 from "../../public/images/articles/form validation in reactjs using custom react hook.png"
+import articleImage1 from "../../public/images/articles/interviewSucks.jpg"
 import TransitionEffect from '@/components/TransitionEffect'
 
 
@@ -123,60 +121,38 @@ const articles = () => {
 
                 <ul className='grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16'>
                     <FeaturedArticle
-                        title="How to create a custom Next.js app"
-                        summary="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quisquam, quod."
+                        title="Why Software Interviews Suck (And How We Can Make Them Better!)"
+                        summary="Traditional software developer interviews can be inadequate in providing a complete picture of a candidate's skills and abilities. 
+                        Algorithm problems, in particular, can be limiting in their assessment of a candidate's potential fit within a company's culture or their ability to work collaboratively. 
+                        I propose a more flexible approach that involves real-world problem-solving challenges, 
+                        which can provide a better assessment of a candidate's ability to innovate and find effective solutions."
                         img={articleImage1}
-                        link="/"
-                        time="2 min read"
+                        link="https://zmhkoo.wordpress.com/2023/04/24/why-software-interviews-suck-and-how-we-can-make-them-better/"
+                        time="5 min read"
                     />
-                    <FeaturedArticle
+                    {/* <FeaturedArticle
                         title="How to create a custom Next.js app"
                         summary="Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Quisquam, quod."
                         img={articleImage2}
                         link="/"
                         time="2 min read"
-                    />
+                    /> */}
                 </ul>
                 <h2 className='font-bold text-4xl w-full text-center my-16 mt-32'>All Articles</h2>
                 <ul>
                     <Article
+                    title="TBA"
+                    date="TBA"
+                    link="/"
+                    img={articleImage1}
+                    />
+                    {/* <Article
                         title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
                         date="March 22, 2023"
                         link="/"
                         img={articleImage3}
-                    />
-                    <Article
-                        title="How to create a custom Next.js app"
-                        date="March 22, 2023"
-                        link="/"
-                        img={articleImage3}
-                    />
-                    <Article
-                        title="How to create a custom Next.js app"
-                        date="March 22, 2023"
-                        link="/"
-                        img={articleImage3}
-                    />
-                    <Article
-                        title="How to create a custom Next.js app"
-                        date="March 22, 2023"
-                        link="/"
-                        img={articleImage3}
-                    />
-                    <Article
-                        title="How to create a custom Next.js app"
-                        date="March 22, 2023"
-                        link="/"
-                        img={articleImage3}
-                    />
-                    <Article
-                        title="How to create a custom Next.js app"
-                        date="March 22, 2023"
-                        link="/"
-                        img={articleImage3}
-                    />
+                    /> */}
                 </ul>
             </Layout>
         </main>
