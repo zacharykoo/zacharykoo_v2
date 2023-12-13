@@ -53,8 +53,21 @@ const Experience = () => {
             <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
                 <Details 
                 position="Fullstack Engineer" company="Honest Empathy"
+                companyLink="https://gdm-inc.com/"
+                time="2023-Present" address="Calgary, AB"
+                work="As a Developer at GDM Inc., I played a key role in the company's technological advancement 
+                by introducing Redux and React Query, significantly improving software performance. My contributions 
+                extended to the development of innovative features for Converge, where I excelled in both front-end 
+                and back-end tasks, actively participating in various feature components. 
+                Additionally, I implemented robust testing strategies, including API tests, Storybook tests, 
+                and Unit tests, enhancing overall software reliability. 
+                Throughout, I maintained a proactive approach, investigating and swiftly resolving test failures 
+                and customer issues, ensuring the delivery of high-quality products."
+                />
+                <Details 
+                position="Fullstack Engineer" company="Honest Empathy"
                 companyLink="https://www.peersupport.io/"
-                time="2022-Present" address="Vancouver, BC"
+                time="2022-2023" address="Vancouver, BC"
                 work="Experienced in developing scalable, user-friendly web applications 
                 with a strong focus on front-end using React JS and implementing responsive 
                 design principles for optimal mobile compatibility. Skilled in utilizing 
