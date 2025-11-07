@@ -120,7 +120,7 @@ const articles = () => {
                 <AnimatedText text="Words Can Change The World!" className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl' />
 
                 <ul className='grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16'>
-                    <FeaturedArticle
+                    {/* <FeaturedArticle
                         title="Why Software Interviews Suck (And How We Can Make Them Better!)"
                         summary="Traditional software developer interviews can be inadequate in providing a complete picture of a candidate's skills and abilities. 
                         Algorithm problems, in particular, can be limiting in their assessment of a candidate's potential fit within a company's culture or their ability to work collaboratively. 
@@ -129,7 +129,7 @@ const articles = () => {
                         img={articleImage1}
                         link="https://zmhkoo.wordpress.com/2023/04/24/why-software-interviews-suck-and-how-we-can-make-them-better/"
                         time="5 min read"
-                    />
+                    /> */}
                     {/* <FeaturedArticle
                         title="How to create a custom Next.js app"
                         summary="Lorem ipsum dolor sit amet consectetur adipisicing elit.

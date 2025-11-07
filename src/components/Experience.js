@@ -52,9 +52,21 @@ const Experience = () => {
 
             <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
                 <Details 
+                    position="Fullstack Engineer" company="Disco inc"
+                    companyLink="https://www.disco.co/"
+                    time="2025-Present" address="Toronto, ON"
+                    work="As a Developer at Disco, 
+                    I have implemented AI-powered features in the web application, including curriculum generation, 
+                    video transcription, and a chat-based learning assistant. 
+                    I also developed key platform components such as the event drawer, member leaderboard, CSV uploader, and video upload workflows. 
+                    Additionally, I led the migration from legacy useStyles to modern CSS Modules, 
+                    improving code maintainability and front-end performance. To ensure high-quality and reliable software, 
+                    I built comprehensive end-to-end and integration test coverage across the platform."
+                />
+                <Details 
                 position="Fullstack Engineer" company="GDM Inc."
                 companyLink="https://gdm-inc.com/"
-                time="2023-Present" address="Calgary, AB"
+                time="2023-2025" address="Calgary, AB"
                 work="As a Developer at GDM Inc., I played a key role in the company's technological advancement 
                 by introducing Redux and React Query, significantly improving software performance. My contributions 
                 extended to the development of innovative features for Converge, where I excelled in both front-end 
